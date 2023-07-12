@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .container {
+                height: 40vh;
+                position: relative;
+            }
+            video {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            span {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <video
+                style="width: 100%; height: 40vh"
+                id="video"
+                src=""
+                autoplay
+            ></video>
+        </div>
+        <div id="navigate">
+            <span>video 1</span>
+            <span>video 1</span>
+            <span>video 1</span>
+            <span>video 1</span>
+        </div>
+
+        <script>
+            const elems = document.querySelectorAll("#navigate span");
+            const video = document.querySelector("video");
+
+
+            for (let elem = 0; elem < elems.length; elem++) {
+                console.log(elems[elem]);
+                elems[e].addEventListener("mouseover", () => {
+                    video.src = "./videos/1.mp4";
+                });
+            }
+        </script>
+    </body>
+</html>
