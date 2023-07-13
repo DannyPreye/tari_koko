@@ -3,14 +3,15 @@ const redPar = document.getElementsByClassName("red");
 const p = document.getElementsByTagName("p");
 const query = document.querySelector("#container+p");
 const queryAll = document.querySelectorAll("#container~p");
+const click = document.getElementById("click");
 // const body = document.querySelector("body");
 // const videoEle = document.querySelector("video");
 
-console.log(body);
+// console.log(body);
 
 container.innerHTML = "<b>hello</b>";
 // container.style.background = "red";
-container.style.color = "white";
+container.style.color = "red";
 // container.className = "koko";
 container.classList.add("koko");
 container.classList.remove("html");
@@ -43,3 +44,8 @@ container.classList.remove("html");
 // };
 
 // sayHi("Tari");
+
+click.addEventListener("click", function () {
+    console.log("you clicked me why?");
+    container.style.color = "blue";
+});
