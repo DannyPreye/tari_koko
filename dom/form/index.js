@@ -5,6 +5,7 @@ const password = registrationForm["password"];
 const errorParagraph = document.getElementById("error");
 const userError = document.getElementById("user-error");
 const container = document.getElementById("container");
+const date = registrationForm["date"];
 
 container.style.height = "300px";
 container.style.background = "red";
@@ -14,6 +15,15 @@ container.addEventListener("click", () => {
 
 document.getElementById("link").addEventListener("click", (e) => {
     e.stopPropagation();
+});
+
+date.addEventListener("change", (e) => {
+    console.log(e.target.value);
+
+    const date = new Date(e.target.value);
+
+    const year = date.getFullYear();
+    console.log(year);
 });
 
 username.addEventListener("change", (e) => {
