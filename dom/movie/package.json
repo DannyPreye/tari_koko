@@ -1,0 +1,15 @@
+{
+    "name": "movie",
+    "version": "1.0.0",
+    "description": "A movie web application for getting movie information",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "npx tailwindcss -i ./index.css -o ./dist/output.css --watch"
+    },
+    "author": "Danny",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^3.3.3"
+    }
+}

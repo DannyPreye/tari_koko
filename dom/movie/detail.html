@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./dist/output.css" />
+    </head>
+    <body>
+        <header
+            class="px-[1rem] bg-blue-800 text-white py-[1.4rem] flex justify-between"
+        >
+            <h3 class="font-bold">Logo</h3>
+            <ul class="hidden lg:flex gap-[1rem]">
+                <li>Home</li>
+                <li>Movies</li>
+                <li>TV series</li>
+                <li>Bookmark</li>
+            </ul>
+            <div class="w-[20px] lg:hidden flex flex-col gap-[3px]">
+                <span class="w-full h-[5px] rounded-full bg-white"></span>
+                <span class="w-full h-[5px] rounded-full bg-white"></span>
+                <span class="w-full h-[5px] rounded-full bg-white"></span>
+            </div>
+        </header>
+        <main class="mt-12 px-5">
+            <section id="details"></section>
+            <section>
+                <h2>Related Movies</h2>
+                <div id="related"></div>
+            </section>
+        </main>
+
+        <script src="./detail.js"></script>
+    </body>
+</html>
