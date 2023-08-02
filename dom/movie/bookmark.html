@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./dist/output.css" />
+    </head>
+    <body>
+        <header
+            class="px-[1rem] bg-blue-800 text-white py-[1.4rem] flex justify-between"
+        >
+            <h3 class="font-bold">Logo</h3>
+            <ul class="hidden lg:flex gap-[1rem]">
+                <li>Home</li>
+                <li>Movies</li>
+                <li>TV series</li>
+                <li class="relative">
+                    <a id="menu-bookmark" href="/bookmark.html"
+                        >Bookmark <span></span
+                    ></a>
+                </li>
+            </ul>
+            <div class="w-[20px] lg:hidden flex flex-col gap-[3px]">
+                <span class="w-full h-[5px] rounded-full bg-white"></span>
+                <span class="w-full h-[5px] rounded-full bg-white"></span>
+                <span class="w-full h-[5px] rounded-full bg-white"></span>
+            </div>
+        </header>
+
+        <main class="mt-8 container mx-auto">
+            <h1 class="text-[2rem]">Bookmark</h1>
+            <section
+                class="flex gap-4 flex-wrap mt-4 justify-start items-stretch"
+                id="movies"
+            ></section>
+        </main>
+        <script src="./bookmark.js"></script>
+    </body>
+</html>

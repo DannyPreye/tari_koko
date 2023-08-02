@@ -27,13 +27,45 @@ if (mediaType == "movie") {
                             (genre) => `<span> ${genre.name}</span>`
                         )}
                     </div>
+                    <button id="bookmark" class="h-[36px] px-3 rounded-md hover:scale-90 duration-700 bg-blue-700 text-white font-bold"> Add to Bookmark </button>
                  </div>
                 <div class="mt-8">
                     <h2 class="text-[1.7rem] font-bold"> Overview </h2>
                     <p>${movie.overview} </p>
                 </div>
             `;
+
+            document
+                .getElementById("bookmark")
+                .addEventListener("click", () => {
+                    addBookmark(movie);
+                });
         });
 } else {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`);
+}
+
+function addBookmark(movie) {
+    // Get items from the bookmark
+    const datafromStorage = localStorage.getItem("bookmarkmovies");
+    // convert from json to javascript data
+    const backToJs = JSON.parse(datafromStorage);
+    // filter out the current movie from the bookmark
+    const newbookmark = backToJs.filter((item) => item.id !== movie.id);
+
+    // check if there's data in the bookmark
+    if (newbookmark.length > 0) {
+        // if there's data already push the current data into the bookmark
+        newbookmark.push(movie);
+        // store back to the localstorage
+        localStorage.setItem("bookmarkmovies", JSON.stringify(newbookmark));
+    } else {
+        // if there's no data add this movie
+        const newBookmarkMovies = [movie];
+        // store in the local storage
+        localStorage.setItem(
+            "bookmarkmovies",
+            JSON.stringify(newBookmarkMovies)
+        );
+    }
 }

@@ -15,7 +15,11 @@
                 <li>Home</li>
                 <li>Movies</li>
                 <li>TV series</li>
-                <li>Bookmark</li>
+                <li class="relative">
+                    <a id="menu-bookmark" href="/bookmark.html"
+                        >Bookmark <span></span
+                    ></a>
+                </li>
             </ul>
             <div class="w-[20px] lg:hidden flex flex-col gap-[3px]">
                 <span class="w-full h-[5px] rounded-full bg-white"></span>
@@ -25,25 +29,46 @@
         </header>
 
         <main class="mt-8 px-5">
-            <section>
-                <div class="flex justify-between items-center">
-                    <h2 class="font-bold text-[1.3rem]">Movies</h2>
-                    <a class="hover:scale-110" href="./movie.html">Show more</a>
-                </div>
-                <div
-                    id="movies"
-                    class="flex flex-wrap gap-4 mt-5 justify-start items-stretch"
-                ></div>
-            </section>
-            <section class="mt-[2rem]">
-                <div class="flex justify-between items-center">
-                    <h2 class="font-bold text-[1.3rem]">Tv Series</h2>
-                    <a class="hover:scale-110" href="./movie.html">Show more</a>
-                </div>
-                <div
-                    id="tv-series"
-                    class="flex gap-4 flex-wrap mt-4 justify-start items-stretch"
-                ></div>
+            <form name="search" class="flex items-center justify-between">
+                <input
+                    class="border-2 focus:outline-none h-[36px] flex-1 my-5 border-blue-400 rounded-l-lg px-3"
+                    type="text"
+                    name="search-input"
+                    placeholder="Search..."
+                    id=""
+                />
+                <button
+                    class="h-[36px] px-4 bg-blue-800 text-white font-bold rounded-r-lg"
+                >
+                    Search
+                </button>
+            </form>
+
+            <section id="all-section">
+                <section>
+                    <div class="flex justify-between items-center">
+                        <h2 class="font-bold text-[1.3rem]">Movies</h2>
+                        <a class="hover:scale-110" href="./movie.html"
+                            >Show more</a
+                        >
+                    </div>
+                    <div
+                        id="movies"
+                        class="flex flex-wrap gap-4 mt-5 justify-start items-stretch"
+                    ></div>
+                </section>
+                <section class="mt-[2rem]">
+                    <div class="flex justify-between items-center">
+                        <h2 class="font-bold text-[1.3rem]">Tv Series</h2>
+                        <a class="hover:scale-110" href="./movie.html"
+                            >Show more</a
+                        >
+                    </div>
+                    <div
+                        id="tv-series"
+                        class="flex gap-4 flex-wrap mt-4 justify-start items-stretch"
+                    ></div>
+                </section>
             </section>
         </main>
 
